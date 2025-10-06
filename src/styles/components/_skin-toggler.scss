@@ -1,0 +1,46 @@
+#skin-toggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+#skin-toggle-btn {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10; // Keep button on top
+  flex-shrink: 0; // Prevent button from shrinking
+}
+
+.skin-buttons-container {
+  position: relative;
+  left: 1em; // Position to the right of the button
+  display: flex;
+  gap: 5px;
+  background-color: var(--primary-color, #3a3f47);
+  padding: 5px 10px;
+  border-radius: 25px;
+  
+  // Hiding/Showing logic
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+}
+
+.skin-btn {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 0;
+  white-space: nowrap;
+}

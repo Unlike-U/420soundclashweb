@@ -1,0 +1,53 @@
+body.skin-funk {
+  --background-color: #ffffff;
+  --primary-color: #f5f5dc;    // Beige
+  --accent-color: #000080;     // Navy (Marine Blue)
+  --text-color: #000000;
+  --border-color: #ffd700;     // Gold (Yellow)
+  --tracklist-bg: #fafad2;
+  --tracklist-hover-bg: #eee8aa;
+  --tracklist-selected-bg: var(--accent-color);
+  --tracklist-selected-text: #ffffff;
+
+  background: radial-gradient(ellipse at center, var(--primary-color) 0%, var(--background-color) 100%);
+  background-attachment: fixed;
+  color: var(--text-color);
+
+  .channel-strip {
+    background-color: var(--primary-color);
+    border: 2px solid var(--border-color);
+  }
+
+  .channel-strip h2, .effects-rack h3 {
+    color: var(--accent-color);
+  }
+
+  button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: 1px solid var(--border-color);
+  }
+
+  .play-btn.active, button.active {
+    background-color: #ffd700;
+    color: #000000;
+  }
+
+  input[type="range"]::-webkit-slider-thumb { background: var(--accent-color); }
+  input[type="range"]::-moz-range-thumb { background: var(--accent-color); }
+
+  .tracklist {
+    height: 200px;
+    background-color: var(--tracklist-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow-y: auto;
+    padding: 0;
+    .gridjs-tr:hover .gridjs-td { background-color: var(--tracklist-hover-bg); }
+    .gridjs-tr-selected .gridjs-td {
+      background-color: var(--tracklist-selected-bg);
+      color: var(--tracklist-selected-text);
+      font-weight: bold;
+    }
+  }
+}

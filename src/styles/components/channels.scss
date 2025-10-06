@@ -1,0 +1,85 @@
+.channel-strip {
+    background-color: #4a4f57;
+    border: 1px solid #282c34;
+    border-radius: 8px;
+    padding: 10px; // Reduced padding
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // Reduced gap
+
+    .controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .play-controls {
+        display: flex;
+        gap: 10px;
+        
+        button {
+            flex-grow: 1;
+        }
+
+        .cue-btn {
+            background-color: #5a5f67;
+            color: #ffffff;
+
+            &.active {
+                background-color: #ff9800; // Bright color when active
+                color: #282c34;
+            }
+        }
+    }
+
+    .time-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+
+        .time-slider {
+            flex-grow: 1;
+        }
+
+        .time-current, .time-remaining {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 40px; // Prevent layout shifts
+            text-align: center;
+        }
+    }
+
+    .knob-row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: var(--accent-color, #61dafb);
+        border: none;
+        color: var(--background-color, #282c34);
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+    }
+}

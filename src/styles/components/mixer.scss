@@ -1,0 +1,77 @@
+.crossfader {
+    height: 15px; // Make the track taller
+    margin: 10px 0;
+}
+
+// Mixer-specific styles
+#master-controls {
+    justify-content: flex-start; // Align items to the top
+    align-items: center;
+    gap: 15px; // Reduced gap
+
+    #visualizer {
+        background-color: #282c34;
+        border: 1px solid #5a5f67;
+        border-radius: 4px;
+        width: 100%;
+        height: 100px;
+    }
+
+    .volume-controls {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: space-around;
+    }
+
+    .recorder-controls {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+
+        button {
+            flex-grow: 1;
+        }
+
+        #record-btn.active {
+            background-color: #e91e63; // Red color when recording
+            color: white;
+        }
+
+        button:disabled {
+            background-color: #5a5f67;
+            cursor: not-allowed;
+        }
+    }
+
+    .effects-rack {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        h3 {
+            margin: 0;
+            text-align: center;
+        }
+
+        .knob-row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .fader-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+
+            label {
+                font-weight: bold;
+            }
+        }
+    }
+}

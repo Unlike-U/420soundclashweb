@@ -1,0 +1,90 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-start; /* Align to top */
+  justify-content: center;
+  padding-top: 10vh; /* Add space above */
+}
+
+.modal-content {
+  background-color: var(--primary-color, #fefefe);
+  color: var(--text-color, #000);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--accent-color, #888);
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color, black);
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .donation-options {
+    margin: 20px 0;
+  }
+
+  .donation-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color, #007bff);
+    color: var(--primary-color, white);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    &.paypal {
+      background-color: #00457C;
+    }
+  }
+
+  .crypto-donations {
+    margin-top: 15px;
+
+    p {
+      margin: 5px 0;
+    }
+
+    code {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 3px 5px;
+      border-radius: 3px;
+      word-wrap: break-word;
+    }
+  }
+
+  .download-now-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}

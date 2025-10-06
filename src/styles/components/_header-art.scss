@@ -1,0 +1,14 @@
+#header-art {
+  box-sizing: border-box;
+  margin: 0 auto 15px auto;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  font-weight: bold; // Make font bold
+  text-align: center;
+  color: var(--accent-color, #61dafb);
+  white-space: pre;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
