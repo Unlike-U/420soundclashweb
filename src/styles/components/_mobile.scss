@@ -18,3 +18,9 @@
     box-sizing: border-box;
   }
 }
+
+@media (orientation: landscape) and (max-height: 500px) {
+    #interface-wrapper {
+        transform: scale(0.9);
+    }
+}
