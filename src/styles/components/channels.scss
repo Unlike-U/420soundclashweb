@@ -3,7 +3,8 @@
     border: 1px solid #282c34;
     border-radius: 8px;
     padding: 10px; // Reduced padding
-    width: 300px;
+    flex: 1;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     gap: 10px; // Reduced gap

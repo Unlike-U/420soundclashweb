@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
   #header-art {
-    font-size: 6px;
+    font-size: 2px;
   }
 
   .mixer-container.mobile-layout {
@@ -20,7 +20,13 @@
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
-    #interface-wrapper {
-        transform: scale(0.9);
-    }
+  body {
+    /* Ensure the content starts from the top */
+    place-items: start center;
+  }
+  #interface-wrapper {
+    /* Scale the entire interface down */
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
 }
